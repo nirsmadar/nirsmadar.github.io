@@ -1,0 +1,260 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+html tags
+*/
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+}
+
+[contenteditable]:focus { outline: 0px solid transparent; }
+
+/*
+main classes
+*/
+
+.no-select {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*
+elements
+*/  
+
+#wrapper {
+    height: 100%;
+    background: #1D1D1D;
+}
+
+#top-container {
+	height:30%;
+	background: #2E2E2E;
+	border-top:10px solid #345B5A;
+	padding-top:10px;
+	box-sizing: border-box;
+	text-align:right;
+	color:#fff;
+}
+
+#expression {
+	font-size: 10vh;
+}
+
+#result {
+	font-size: 7vh;
+	margin-top: 3%;
+	margin-right: 10px;
+	color:#4C96FC;
+}
+
+#btm-container {
+	height: 69.4%;
+	margin-top: 0.3%;
+}
+
+#keys, #operators, #tokens, #tree, #controls {
+	float: left;
+	height: 100%;
+}
+
+#controls {
+    width: 50%;
+}
+
+#tokens, #tree {
+	width:25%;
+}
+
+#keys {
+	width :60%;
+	/*background: purple;*/
+}
+
+#operators {
+	width:34%;
+	margin-left: 3%;
+	/*background: blue;*/
+}
+
+#controls .row {
+	height: 25%;
+	display: block;
+}
+
+#keys .key {
+	width: 32%;
+}
+
+#operators .key {
+	width: 49%;
+}
+
+#controls .key {
+    float:left;
+    height:98%;
+    margin-left:1%;
+    background:#3E3E3E;
+    display: table;
+}
+
+#controls .key span {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color:#fff;
+	font-size: 4vw;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#controls .key span:hover {
+	background: #6B6B6B;
+}
+
+#controls .key-distinct span:hover {
+	background:#4C96FC;
+}
+
+#controls .key-distinct span {
+	background: #2C71D1;
+}
+
+#tokens-table {
+	color:#fff;
+	width:100%;
+	/*background: blue;*/
+}
+
+#tokens-table th {
+	color: #098191;
+	font-weight: bold;
+}
+
+#tokens-table td, th {
+   padding: 1%;
+   text-align: left;
+   font-size: 1.5em;
+}
+
+.tree {
+	overflow: auto;
+	color:#fff;
+}
+
+/*http://thecodeplayer.com/walkthrough/css3-family-tree*/
+.tree ul {
+	padding-top: 20px;
+	position: relative;
+}
+.tree li {
+	float: left; 
+	text-align: center;
+	position: relative;
+	padding: 20px 5px 0 5px;
+}
+.tree li::before, .tree li::after {
+	content: '';
+	position: absolute; 
+	top: 0; 
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; 
+	height: 20px;
+}
+.tree li::after{
+	right: auto; 
+	left: 50%;
+	border-left: 1px solid #ccc;
+}
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+.tree li:only-child{ padding-top: 0;}
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+.tree li:last-child::before{
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+.tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0; height: 20px;
+}
+.tree li span {
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 2vw;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}

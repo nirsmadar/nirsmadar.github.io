@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Polymer-like Math Parser</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css"></link>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id="wrapper">
+	    <div id="top-container">
+	    	<div id="expression" contenteditable="plaintext-only"></div>
+	    	<div id="result"></div>
+	    </div>
+	    
+	    <div id="btm-container">
+		    <div id="controls" class="no-select">
+		    	<div id="keys">
+		    		<div class="row">
+						<a class="key"><span data-type="key" data-value="7">7</span></a>
+						<a class="key"><span data-type="key" data-value="8">8</span></a>
+						<a class="key"><span data-type="key" data-value="9">9</span></a>
+					</div>
+					<div class="row">
+						<a class="key"><span data-type="key" data-value="4">4</span></a>
+						<a class="key"><span data-type="key" data-value="5">5</span></a>
+						<a class="key"><span data-type="key" data-value="6">6</span></a>
+					</div>
+					<div class="row">
+						<a class="key"><span data-type="key" data-value="1">1</span></a>
+						<a class="key"><span data-type="key" data-value="2">2</span></a>
+						<a class="key"><span data-type="key" data-value="3">3</span></a>
+					</div>
+					<div class="row">
+						<a class="key"><span data-type="key" data-value="0">0</span></a>
+						<a class="key"><span data-type="key" data-value=".">.</span></a>
+						<a class="key key-distinct"><span data-type="calculate">=</span></a>
+					</div>
+		    	</div>
+
+		    	<div id="operators">
+		    		<div class="row">
+						<a class="key"><span data-type="key" data-value="+">+</span></a>
+						<a class="key"><span data-type="key" data-value="-">-</span></a>
+					</div>
+					<div class="row">
+						<a class="key"><span data-type="key" data-value="/">&#247;</span></a>
+						<a class="key"><span data-type="key" data-value="*">x</span></a>
+					</div>
+					<div class="row">
+						<a class="key"><span data-type="key" data-value="(">(</span></a>
+						<a class="key"><span data-type="key" data-value=")">)</span></a>
+					</div>
+					<div class="row">
+						<a class="key"><span data-type="key" data-value="^">^</span></a>
+						<a class="key"><span data-type="var">var</span></a>
+					</div>
+		    	</div>
+		    </div>
+
+		    <div id="tokens"></div>
+			<div id="tree" class="tree"></div>
+	    </div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="parser.js"></script>
+</body>
+</html>
